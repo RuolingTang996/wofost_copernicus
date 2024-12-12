@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Wofost on wur",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/wofost",  
+            "args": [],                                // Any arguments you want to pass to your program
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",               // Current working directory
+            "environment": [],
+            "externalConsole": false,                   // Optional: Opens an external console
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerPath": "/usr/bin/gdb"           // Path to gdb (verify it's correct for your system)
+        }
+    ]
+}
